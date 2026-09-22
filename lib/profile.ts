@@ -4,33 +4,56 @@ export type Role = 'student' | 'teacher';
 
 export type Profile = {
   id: string;
-  email: string;
+  email: string | null;
   full_name: string | null;
   role: Role;
 };
 
-export async function getProfile(userId: string): Promise<Profile | null> {
+/**
+ * Get the profile of a user.
+ */
+export async function getProfile(
+  userId: string
+): Promise<Profile | null> {
   const { data, error } = await supabase
     .from('profiles')
     .select('id, email, full_name, role')
     .eq('id', userId)
     .maybeSingle();
 
-  if (error || !data) {
+  if (error) {
+    console.log('getProfile error:', error);
     return null;
   }
 
-  return data as Profile;
+  return data as Profile | null;
 }
 
+/**
+ * Update the user's profile.
+ */
 export async function updateProfile(
   userId: string,
-  updates: { full_name?: string; role?: Role }
-): Promise<{ error: string | null }> {
-  const { error } = await supabase
+  updates: Partial<Profile>
+) {
+  const { data, error } = await supabase
     .from('profiles')
     .update(updates)
-    .eq('id', userId);
+    .eq('id', userId)
+    .select('id, email, full_name, role')
+    .single();
 
-  return { error: error?.message ?? null };
+  if (error) {
+    console.log('updateProfile error:', error);
+
+    return {
+      data: null,
+      error: error.message,
+    };
+  }
+
+  return {
+    data: data as Profile,
+    error: null,
+  };
 }

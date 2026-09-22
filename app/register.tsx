@@ -242,8 +242,8 @@ const styles = StyleSheet.create({
   },
   headerContainer: {
     alignItems: 'center',
-    marginTop: 20,
-    marginBottom: 16,
+    marginTop: 2,
+    marginBottom: 2,
   },
   title: {
     fontSize: 28,
@@ -255,7 +255,7 @@ const styles = StyleSheet.create({
     fontSize: 15,
     color: COLORS.textSecondary,
     lineHeight: 21,
-    marginBottom: 32,
+    marginBottom: 5,
   },
   form: {
     marginBottom: 24,
@@ -276,6 +276,7 @@ const styles = StyleSheet.create({
     paddingVertical: 12,
     fontSize: 16,
     color: COLORS.textPrimary,
+    marginBottom: 4
   },
   roleRow: {
     flexDirection: 'row',
@@ -319,6 +320,7 @@ const styles = StyleSheet.create({
     color: COLORS.primary,
     textAlign: 'center',
     fontWeight: '600',
+    marginBottom: 20,
   },
   successContainer: {
     alignItems: 'center',

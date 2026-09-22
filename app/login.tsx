@@ -169,6 +169,7 @@ const styles = StyleSheet.create({
     paddingVertical: 12,
     fontSize: 16,
     color: COLORS.textPrimary,
+    marginBottom: 4,
   },
   error: {
     fontSize: 14,

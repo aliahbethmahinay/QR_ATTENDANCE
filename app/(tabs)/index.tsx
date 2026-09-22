@@ -57,46 +57,43 @@ export default function Index() {
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: COLORS.background,
-  },
-
-  headerContainer: {
-    flex: 1,
-    justifyContent: 'center',
-  },
-
-  author: {
-    textAlign: 'center',
-    width: '100%',
-    marginTop: 4,
-  },
-
-  bodyContainer: {
-    paddingHorizontal: 32,
-    marginBottom: 16,
-  },
-
-  mainTitle: {
-    fontSize: 22,
-    fontWeight: '700',
-    color: COLORS.textPrimary,
-    marginBottom: 6,
-  },
-
-  subtitle: {
-    fontSize: 15,
-    color: COLORS.textSecondary,
-    lineHeight: 21,
-  },
-
-  footerContainer: {
-    flex: 1 / 3,
-    alignItems: 'center',
-    justifyContent: 'flex-start',
-    paddingHorizontal: 24,
-    width: '100%',
-    gap: 1,
-  },
+container: {
+flex: 1,
+backgroundColor: COLORS.background,
+justifyContent: 'space-between',
+paddingVertical: 24,
+},
+headerContainer: {
+justifyContent: 'center',
+alignItems: 'center',
+marginTop: 70,
+marginBottom: 80,
+},
+author: {
+textAlign: 'center',
+width: '100%',
+marginTop: 4,
+},
+bodyContainer: {
+paddingHorizontal: 32,
+marginBottom: 15,
+},
+mainTitle: {
+fontSize: 22,
+fontWeight: '700',
+color: COLORS.textPrimary,
+marginBottom: 6,
+},
+subtitle: {
+fontSize: 15,
+color: COLORS.textSecondary,
+lineHeight: 21,
+},
+footerContainer: {
+alignItems: 'center',
+justifyContent: 'flex-start',
+paddingHorizontal: 24,
+width: '100%',
+paddingBottom: 12,
+},
 });

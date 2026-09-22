@@ -332,14 +332,15 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: COLORS.background,
     paddingHorizontal: 24,
-    paddingTop: 24,
+    paddingTop: 40,
   },
 
   title: {
     fontSize: 20,
-    fontWeight: '600',
+    fontWeight: 'bold',
     color: COLORS.textPrimary,
     marginBottom: 16,
+    textAlign: 'center',
   },
 
   subtitle: {
